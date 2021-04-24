@@ -1,0 +1,9 @@
+[Trigger]
+Type = Package
+Operation = Remove
+Target =  bootsplash-theme-biglinux
+
+[Action]
+Description = Remove bootsplash-biglinux
+When = PreTransaction
+Exec = /usr/share/libalpm/scripts/bootsplash-biglinux-remove
