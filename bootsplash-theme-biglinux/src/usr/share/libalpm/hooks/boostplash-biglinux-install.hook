@@ -1,9 +1,0 @@
-[Trigger]
-Type = Package
-Operation = Install
-Target =  bootsplash-theme-biglinux
-
-[Action]
-Description = Enable bootsplash-biglinux
-When = PostTransaction
-Exec = /usr/share/libalpm/scripts/bootsplash-biglinux-install
