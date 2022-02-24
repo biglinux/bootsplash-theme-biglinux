@@ -1,27 +1,26 @@
 pkgbase=bootsplash-themes
 pkgname=('bootsplash-theme-biglinux')
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 url="https://lists.freedesktop.org/archives/dri-devel/2017-December/160242.html"
 arch=('x86_64')
 license=('GPL')
 
-depends=('bootsplash-systemd')
+depends=("bootsplash-systemd" "bootsplash-manager")
 builddepends=('imagemagick')
 options=('!libtool' '!emptydirs')
 
 source=('bootsplash-packer'
-	'bootsplash-biglinux.sh'
+	'bootsplash-biglinux'
 	'bootsplash-biglinux.initcpio_install'
-	'spinner.gif'
-	'biglinux.png')
+	'logo.gif')
 
 sha256sums=('SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
             'SKIP')
-
+install=post.install
 build() {
   cd "$srcdir"
   sh ./bootsplash-biglinux.sh
@@ -33,6 +32,6 @@ package_bootsplash-theme-biglinux() {
 
   install -Dm644 "$srcdir/bootsplash-biglinux" "$pkgdir/usr/lib/firmware/bootsplash-themes/biglinux/bootsplash"
   install -Dm644 "$srcdir/bootsplash-biglinux.initcpio_install" "$pkgdir/usr/lib/initcpio/install/bootsplash-biglinux"
-  cp -R "$srcdir/usr" "$pkgdir/"
+# #   cp -R "$srcdir/usr" "$pkgdir/"
 
 } 
