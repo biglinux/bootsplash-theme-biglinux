@@ -61,19 +61,6 @@ convert -alpha remove \
 	--blob logo24.rgb \
 	--blob logo25.rgb \
 	--blob logo26.rgb \
-	--blob logo27.rgb \
-	--blob logo28.rgb \
-	--blob logo29.rgb \
-	--blob logo30.rgb \
-	--blob logo31.rgb \
-	--blob logo32.rgb \
-	--blob logo33.rgb \
-	--blob logo34.rgb \
-	--blob logo35.rgb \
-	--blob logo36.rgb \
-	--blob logo37.rgb \
-	--blob logo38.rgb \
-	--blob logo39.rgb \
-	bootsplash-biglinux-globo
+	bootsplash-biglinux
 
 rm *.rgb
